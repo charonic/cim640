@@ -5,4 +5,4 @@
 
 [click here for google](http://www.google.com)
 
-[It's called the book of faces](http://www.facebook.com)
+[Don't click here, it'll eat your soul](http://tvtropes.org)
