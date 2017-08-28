@@ -9,4 +9,4 @@
 
 ## ['tis a link to the week one assignment page](https://github.com/charonic/cim640/tree/master/week%201)
 
-![the red panda is the best panda creature](http://s4.thingpic.com/images/AJ/fjkphqSqQfU6wyjFFwLBzqXp.jpeg)s
+![the red panda is the best panda creature](http://s4.thingpic.com/images/AJ/fjkphqSqQfU6wyjFFwLBzqXp.jpeg)
