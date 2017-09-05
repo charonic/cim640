@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+ </head>
+
+
+<body>
+
+    <h1>USD to Misc Currencies</h1>
+
+    <p><i>This will convert US dollar amounts to currencies from around the world.</i></p>
+    
+    <h2>USD to Rubles<h2>
+        <form>
+        <label for="rubles">Rubles</label>
+        <input type="text" name="rubles" id="rubles"> <button onclick="<script>window.alert(convertRuble(x,57.77))</script>">Convert to Rubles</button>
+    <!-- I want to input an amount of USD and get anothe currency amount spit out at me. The latter can use "window.alert" I think but how do I smash it together.This has to be much longer, code is obediant to a fault , so I have to literally type out what everything does.
+    
+    Primarily, how do i code it so that the "<button onclick="x"</button> actually fires off the "window.alert".
+
+    -->
+        
+        </form>
+    <br>
+    
+    <h2>USD to Rupees</h2>
+    <br>
+    
+    <h2>USD to Euros</h2>
+    <br>
+    
+    <h2>USD to Real</h2>
+    <br>
+    <script>
+       
+    
+    function convertRubles(multiply1,multiply2){
+        var multiplication= multiply1 * multiply2;
+        console.log(multiplication)
+        return multiplication
+          //1 USD= 57.77 RUBLES  
+    }
+    function convertIndianRupees(multiply1,multiply2){ 
+        var multiplication= multiply1 * multiply2;
+        console.log(multiplication)
+        return multiplication
+       // 1 USD =64.12 rupee
+    }
+        
+    function convertEuro(multiply1,multiply2){
+        var multiplication= multiply1* multiply2;
+        console.log(multiplication)
+        return multiplication
+    // 1 USD= .84 EUROS
+    }
+    function convertReal(multiply1,multiply2){
+        var multiplication= multiply1 * multiply2;
+         console.log(multiplication)
+        return multiplication
+    // 1USD= 3.14 REAL    
+    }
+      
+        convertRubles(65,57.77);
+        
+        convertIndianRupees(20,64.12);
+       
+        convertEuro(500,.84);
+       
+        convertReal(4240,3.14);
+        </script>
+</body>
+
+</html>
