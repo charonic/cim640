@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+ </head>
+
+
+
+    <body>
+    <h1>USD to Misc Currencies</h1>
+
+    <p><i>This will convert US dollar amounts to currencies from around the world.</i></p>
+    
+      
+        <form>
+        <label for="rubles"><strong>USD to Rubles</strong></label>
+        <input type="text" name="united states dollars" id="usd"> 
+       <button type="button" id="lButton" >Convert!</button>
+        </form>
+        <div id="output"></div>
+    
+    <h2>USD to Rupees</h2>
+    <br>
+    
+    <h2>USD to Euros</h2>
+    <br>
+    
+    <h2>USD to Real</h2>
+    <br>
+<script>
+       
+    function convertRuble(){
+            var dollaramount= document.getElementById("usd").value;
+            var convertedtorubles = parseInt(dollaramount)* parseInt(rubleconversionrate);
+            console.log(convertRuble);
+           convertRuble= Math.round(convertRuble);
+        convertedRubleamount= Math.round(dollaramount);
+            var message = "You have: " + convertedtorubles + "  Rubles!"
+
+            var outputText = document.getElementById("output")
+            outputText.innerHTML = message;
+        }
+    var rubleconversionrate=57.77;
+    var getButton = document.getElementById("lButton");
+    
+    getButton.addEventListener("click",convertRuble);
+      
+    
+      
+        
+</script>
+
+</body>
+
+</html>
