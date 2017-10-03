@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guessing Game</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+ </head>
+
+
+<body>
+<!-- HTML COMMENTS LOOK LIKE THIS-->
+    <h1>Game of Guesses</h1>
+
+    <p><i>Choose a number between 1-10</i></p>
+    <form>
+        <label for="guessInput">Enter Number:</label>
+        <input test="Text" name= "guessInput" id="guessInput">
+        <button type="button" name="guessButton" id="guessButton">Guess!</button>
+    </form>
+    <div id="outputText"></div>
+
+    <script>
+        function checkAnswer(){
+            //console.log("it's alive!)
+            var guess = document.getElementById("guessInput").value;
+            //not putting .vaule will just print out the input objet. [."x" is a value, a .eyecolor in a human function will give you eyecolor]
+            console.log(guess);
+            
+            // conditionals: if statement is true, execute something
+            //if (guess == answer){
+               // a single "=" means guess become the answer and thus always be true.
+                //console.log("You guessed correctly!");
+                   //the above is the basic form of a conditional
+                //output.innerHTML=("Well done my apprentice");
+               //}else{
+                   //console.log("You've chosen poorly");
+                   //output.innerHTML=("You will not get another chance.");
+               // }
+    
+             //  }
+        if (guess == answer) {
+            output.innerHTML ="You've done well my appprentice, adjust your strength once more."; answer=Math.floor(Math.random() * 11);
+            console.log(answer)
+        }else if(guess < answer && guess >= 0){
+                output.innerHTML="Do not hold back";
+        }else if(guess > answer && guess <=10) {
+                output.innerHTML="A fine display, but a waste of power";
+        }else {
+            output.innerHTML= "Nowhere near my foolish apprentice";
+        }
+            
+       }
+            
+       // && is the  "and" element 
+        //you're always going to get 0-.99, so you have to multiply it by your "UpperRange"+1, so if it's 0-100 you have to Math.floor(Math.random()*101)
+        
+                
+                
+            
+            
+            
+        
+            
+       var guessButton= document.getElementById("guessButton");
+        //the variable becomes a button, it becomes an instance of a button. it's an object. 
+        guessButton.addEventListener("click", checkAnswer);
+       var output=document.getElementById("outputText");
+    var answer = Math.floor(Math.random() * 11);
+        console.log(answer)
+</script>
+    
+
+</body>
+
+</html>

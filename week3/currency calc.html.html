@@ -23,7 +23,8 @@
         <input type="text" name="united states dollars" id="usd"> 
        <button type="button" id="lButton" >Convert!</button>
         </form>
-        <div id="output"></div>
+        <div id="output"></div> 
+       
     
     <h2>USD to Rupees</h2>
     <br>
@@ -37,11 +38,12 @@
        
     function convertRuble(){
             var dollaramount= document.getElementById("usd").value;
-            var convertedtorubles = parseInt(dollaramount)* parseInt(rubleconversionrate);
+            var convertedtorubles = parseInt(dollaramount)* parseInt(rubleconversionrate)
             console.log(convertRuble);
-          
+           
+        convertedRubleamount= Math.round(dollaramount,2);
             var message = "You have: " + convertedtorubles + "  Rubles!"
-//how the fuck do I get the calculator to actively use the decimals?
+
             var outputText = document.getElementById("output")
             outputText.innerHTML = message;
         }
