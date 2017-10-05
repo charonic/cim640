@@ -20,8 +20,8 @@ A Small Message that will spit out the converted currency amount, given that pop
       * The function should be pretty simple, with what I know, the input will be the USD multiplied against the market value of another currency.
         *Rubles: 1 USD = 57.77 Rubles 
         *Rupee:  1 USD = 64.12 Rupees
-        *Euro:   1 USD=  00.84 Euros
-        *Real:   1 USD=  03.14  Real
+        *YUAN:   1 USD=  06.64 Yuan
+        
 So in general the function should be:
     * "x" (for the USD) * "z" (the foreign currency ratio) = "y" (for the foreign currency amount).
-Then a message will be returned from the calculator, I think I'll try to have a picture of falling currency pop up to.
+Then a message will be returned from the calculator.
