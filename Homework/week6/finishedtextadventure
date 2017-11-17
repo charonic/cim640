@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Adventure</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Welcome to Die!</h1>
+
+    <p id="message">You wake up and find yourself at a crossroads. <br>To the north you see an ominous mountain.<br> To the south is a dense forest.<br> To the west you catch a whiff of brine. <br>To the east you smell cooking meat. <br><br>
+    
+    You take each path in turn, but soon enough you realize that reality has decided to take the day off. <br>
+    <br>
+    
+    You blink and for a second you swear the beach has become a mountain has become a village, has become the very crossroads your currently stand at.<br><br>What is happening? How did you get here? How do you get home?<br><br>
+    As you decide to continue trying, you find yourself at the crossroads once more.
+    <br>
+    <br>Which of the constantly shifting options do you take?</p>
+
+    <form id="directionForm">
+        <label>Choose your fate:</label>
+        <br>
+        <input type="radio" name="dir" value="west" id="west">
+        <label for="west">West to the ocean</label>
+        <br>
+        <input type="radio" name="dir" value="north" id="north">
+        <label for="north">Challenge the mountain</label>
+
+        <br>
+        <input type="radio" name="dir" value="east" id="east">
+        <label for="east">Travel to the village</label>
+        <br>
+        <input type="radio" name="dir" value="south" id="south">
+        <label for="south">Take your chances in the dense forest.</label>
+        <br>
+        <input type="radio" name="dir" value="random"
+        id="stay">
+        <label for="stay">Decide the best option is to stay put.</label>
+        <br><br>
+        
+        <button type="button" id="direction">Choose Wisely.</button>
+
+    </form>
+
+    <script>
+        /* Comment: Enter code below */
+        function move() {
+            //grab all the radio buttons with the name dir, then loop through to check which was selected
+            var radios = document.getElementsByName("dir");
+            var currentPos = "";
+            if (radios[0].checked == true) {
+                console.log("west");
+                currentPos = radios[0].value;
+            } else if (radios[1].checked == true) {
+                console.log("north");
+                currentPos = radios[1].value;
+            } else if (radios[2].checked == true) {
+                console.log("east");
+                currentPos = radios[2].value;
+            } else if (radios[3].checked == true) {
+                console.log("south");
+                currentPos = radios[3].value;
+            } else if (radios[4].checked == true) {
+                console.log("stay");
+                currentPos = radios[4].value;
+            } 
+           
+            var chooseConsequence = Math.floor(Math.random() * consequence.length);
+            var chooseLocation = Math.floor(Math.random() * loc.length);
+           
+            if (consequence[chooseConsequence] == "dead") {
+                getMessage.innerHTML = "You are " + consequence[chooseConsequence] + " due to sudden meteor syndrome while you explored the " + loc[chooseLocation];
+                getForm.style.display = "none";
+            } else if (consequence[chooseConsequence] == "survived") {
+                getMessage.innerHTML = "You " + consequence[chooseConsequence] + ". You are in a " + loc[chooseLocation];
+            } else if (consequence[chooseConsequence] == "found") {
+                getMessage.innerHTML = "Your search seems fruitless as you travel for hours only to end up at the "  + loc[chooseLocation] + ". Suddenly, the smell of ozone fills the air and before you very eyes you see a portal to your room. You leap forward without hesitation. You fall for what seems an eternity but just as you finally realize the liberating feeling of endlessly falling, you land in your bed safe and sound. As you sit up a small leatherbound journal falls from your lap, on the cover is a single eye."
+               
+                getForm.style.display = "none";
+            } else if (consequence[chooseConsequence] == "attacked") {
+                getMessage.innerHTML = "You find yourself near the " + loc[chooseLocation] + ". Suddenly you feel as though the temperature has dropped 20 degrees. Shivering you take one step forward before you hear a low growl behind you. Before you can turn, a whooshing noise fills the air and you vision goes dark. When you wake up you find yourself in a cave. As you gather your bearings your hand runs across a bone. As your eyes adjust you see the cave is filled with them. You scramble to your feet and try to flee through the cave entrance. Just as you reach the opening, fate has one more laugh at your expense and a club flies through the air. This time you don't wake up."
+                getForm.style.display = "none";
+            }
+        }
+        var consequence = ["dead", "survived", "found", "attacked"];
+        var loc = ["beach", "mountain", "village","forest", "crossroad"];
+        var getDir = document.getElementById("direction");
+        getDir.addEventListener("click", move);
+        var getMessage = document.getElementById("message");
+        var getForm = document.getElementById("directionForm");
+    </script>
+
+</body>
+
+</html>
